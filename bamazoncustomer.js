@@ -45,14 +45,15 @@ var connection = mysql.createConnection({
            var newQuantity = stock[index].stock_quantity - answer.quantity;
            if (answer.quantity>stock[index].stock_quantity){
                console.log("Sorry we don't have enough quantity");
-               chooseProduct();
+               readProducts();
            }else{
            var totalPrice = stock[index].price * answer.quantity;
            console.log("You total cost : $" +  totalPrice);
            var query = connection.query("UPDATE products SET ? WHERE ?",
            [
-               {
-                stock_quantity : newQuantity
+               { 
+                stock_quantity : newQuantity,
+                product_sales : totalPrice,
                },
             {
                 item_id : productName

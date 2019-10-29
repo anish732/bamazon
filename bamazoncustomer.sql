@@ -33,7 +33,9 @@ INSERT INTO products (product_name,department_name,price,stock_quantity)
 VALUES ("Airpod","Music",180,80);
 
 CREATE TABLE departments(
-    department_id INT NOT NULL,
+    department_id INT NOT NULL AUTO_INCREMENT,
     department_name VARCHAR(100) NOT NULL,
-    over_head_cost INT NOT NULL
-)
+    over_head_cost INT NOT NULL,
+        PRIMARY KEY (department_id)
+
+);

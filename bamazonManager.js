@@ -108,7 +108,7 @@ function addNewProduct(){
             if (err) throw err;
             console.log("Product has been inserted");
             console.log(query.sql);
-            viewProduct();
+            readProducts();
         },
 
         )
@@ -124,7 +124,7 @@ function lowInventory(){
                 console.log("Product_name: "  + result[i].product_name  + "|| \Quantity: " + result[i].stock_quantity);
             }
         };
-        display();
+        connection.end();
     })
 }
 function addInventory(){
@@ -165,10 +165,19 @@ function addInventory(){
             if (err) throw err;
             console.log("Your products has been updated");
             console.log(query.sql);
-            viewProduct();
+            readProducts();
         },
         )
     });
 });
 }
+function readProducts() {
+    console.log("Selecting all products...\n");
+    connection.query("SELECT * FROM products", function(err, res) {
+      if (err) throw err;
+      console.table(res);
+      connection.end();
+    });
+  }
+
 
