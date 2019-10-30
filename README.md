@@ -10,6 +10,7 @@ The app  takes  orders from customers and deplete stock from the store's invento
 * NODE.JS
 
 #### SCREENSHOTS:
+
 ![quantity.png](quantity.png)
 
 ![lowinventory.png](lowinventory.png)

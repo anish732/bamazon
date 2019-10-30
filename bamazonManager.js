@@ -150,6 +150,7 @@ function addInventory(){
         },
     ]).then(function(answer){
         var index = answer.itemId-1;
+        //It convert string to integer
         var newQuantity = (parseInt(stock[index].stock_quantity) + parseInt(answer.quantity));
         console.log(newQuantity);
 
