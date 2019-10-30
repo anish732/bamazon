@@ -10,8 +10,11 @@ The app  takes  orders from customers and deplete stock from the store's invento
 * NODE.JS
 
 #### SCREENSHOTS:
+* If customer wants to buy something more than quantity we have in stock it shows 
 
 ![quantity.png](quantity.png)
+
+* Manager choose low inventory from list it will disply lists of products less than 5 in quantity.
 
 ![lowinventory.png](lowinventory.png)
 
